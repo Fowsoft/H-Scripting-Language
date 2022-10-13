@@ -1,4 +1,6 @@
 # H Scripting Language
 
 H is a C-like scripting language with some innovative features:
--blacklists 
+-blacklists - An interpreter can decide if some libraries or features will not be accessible
+-simple base - The base of the language is very minimal, allowing rapid intgration
+-custom integration layer - The CIL helps you quickly integrate H functionality by just providing some basic functionality.
