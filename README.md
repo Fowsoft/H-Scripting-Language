@@ -12,13 +12,13 @@ H is a C-like scripting language with some innovative features:
 
 This repo includes:
 
--the base C++ interpreter and integration base
+-the base C++ interpreter and integration base (src/cpp/)
 
--the base Java interpreter and integration base
+-the base Java interpreter and integration base (src/java/)
 
--the standard library
+-the standard library (src/hsl/)
 
--the official specifications
+-the official specifications (spc/)
 
 ## H File Format
 
@@ -31,8 +31,6 @@ This repo includes:
 -ends with semicolon `;`
 
 ## Standard Library
-
--standard library is in the hsl/main
 
 ## Hello World
 
