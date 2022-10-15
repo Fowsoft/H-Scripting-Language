@@ -1,4 +1,4 @@
-![H Logo](https://github.com/Fowsoft/H-Scripting-Language/blob/main/h4096.png?raw=true)
+![H Logo](https://github.com/Fowsoft/H-Scripting-Language/blob/7960f2ac740c6f48dc44d8fee60fed8a000eb53a/H4096.png)
 # H Scripting Language
 
 H is an open-source C-like scripting language with some innovative features:
