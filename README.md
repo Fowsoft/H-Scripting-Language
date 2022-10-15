@@ -30,5 +30,15 @@ This repo includes:
 
 -ends with semicolon `;`
 
--
+## Standard Library
+
+## Hello World
+
+```
+import("stdlib")
+void main(Arguments aArgs) {
+    stdlib.out.print("Hello, world!", FLAG_BOLD);
+};
+```
+
 
