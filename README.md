@@ -1,6 +1,6 @@
 # H Scripting Language
 
-H is a C-like scripting language with some innovative features:
+H is an open-source C-like scripting language with some innovative features:
 
 -blacklists - An interpreter can decide if some libraries or features will not be accessible
 
