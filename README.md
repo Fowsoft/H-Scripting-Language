@@ -23,9 +23,9 @@ This repo includes:
 
 ## H File Format
 
-`.hs` - H Script
+`.hsc` - H Script
 
-`.hi` - H Interpreted Layer
+`.hil` - H Interpreted Layer
 
 ## Syntax
 
