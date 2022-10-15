@@ -19,3 +19,12 @@ This repo includes:
 -the standard library
 
 -the official specifications
+
+## H File Format
+
+`.hs` - H Script
+`.hi` - H Interpreted Layer
+
+## Syntax
+
+-ends with semicolon
