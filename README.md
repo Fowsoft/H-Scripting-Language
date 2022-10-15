@@ -23,9 +23,12 @@ This repo includes:
 ## H File Format
 
 `.hs` - H Script
+
 `.hi` - H Interpreted Layer
 
 ## Syntax
 
--ends with semicolon
+-ends with semicolon `;`
+
+-
 
