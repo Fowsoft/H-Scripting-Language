@@ -15,11 +15,11 @@ H is an open-source C-like scripting language with some innovative features:
 
 This repo includes:
 
--the base C++ interpreter and integration base (src/cpp/)
+-the base C++ interpreter (src/cpp/)
 
--the base Java interpreter and integration base (src/java/)
+-the base Java interpreter (src/java/)
 
--the standard library (src/hsl/)
+-the base JavaScript interpreter (src/js/)
 
 -the official specifications (spc/)
 
