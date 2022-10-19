@@ -22,7 +22,7 @@ This repo includes:
 
 `.hsc` - H Script
 
-`.hic' - H Interpreter Config (C++ only)
+`.hic` - H Interpreter Config (C++ only)
 
 ## Syntax
 
@@ -30,7 +30,9 @@ This repo includes:
 
 ## Standard Library
 
--specification separate
+print(text); - prints text
+input(); - returns correct variable type
+exit(code); - exits program with code code
 
 ## Hello World
 
