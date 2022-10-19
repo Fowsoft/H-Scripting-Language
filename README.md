@@ -33,7 +33,7 @@ This repo includes:
 ## Standard Library
 
 print(text); - prints text
-input(); - returns correct variable type
+input(num); - returns correct variable type of num letters
 exit(code); - exits program with code code
 
 ## Hello World
