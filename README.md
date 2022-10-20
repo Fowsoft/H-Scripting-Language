@@ -24,7 +24,7 @@ This repo includes:
 
 `.hsc` - H Script
 
-`.hicf` - H Interpreter Config (C++ only)
+Other file formats coming in the future.
 
 ## Syntax
 
