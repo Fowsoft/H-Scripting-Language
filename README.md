@@ -6,7 +6,7 @@
 H is an free and open-source C-like scripting language aimed at unifying Fowsoft products.
 It is extremely simple and very easy to implement and integrate.
 
-H and it's derivatives are licensed under CC-BY-ND 4.0.
+H and its derivatives are licensed under CC-BY-ND 4.0.
 
 ## Contents
 
