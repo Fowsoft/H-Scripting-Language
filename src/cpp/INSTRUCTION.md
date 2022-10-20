@@ -1,6 +1,6 @@
 # The C++ Interpreter for H
 
-This includes 1 file. If you need jsut the interpreter, copy the H and Utils namespaces.
+This includes 1 file. If you need just the interpreter, copy the H and Utils namespaces.
 If you already implemented the utilities, copy just the H namespace.
 
 ## String Special Characters
@@ -25,4 +25,13 @@ If you already implemented the utilities, copy just the H namespace.
 
 ## Warnings and Errors
 
-//todo: add warnings and error
+### Warnings
+
+Extra semicolon at line N
+
+### Errors
+
+
+
+//todo: add warnings and errors
+
