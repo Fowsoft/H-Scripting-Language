@@ -1,6 +1,6 @@
 [![CC BY ND 4.0][cc-by-nd-shield]][cc-by-nd]
 
-![H Logo](https://github.com/Fowsoft/H-Scripting-Language/blob/7960f2ac740c6f48dc44d8fee60fed8a000eb53a/H4096.png)
+![H Logo](https://github.com/Fowsoft/H-Scripting-Language/blob/e30d464ef0a83aa12bb17c1ae59e4edd80ba30c8/HLogo.png)
 # H Scripting Language
 
 H is an free and open-source C-like scripting language aimed at unifying Fowsoft products.
