@@ -30,6 +30,14 @@ Other file formats coming in the future.
 
 -ends with semicolon `;`
 
+## Licensing
+
+C++ Interpreter: CC-BY 4.0
+
+Java Interpreter: CC-BY-ND 4.0
+
+JS Interpreter: ???
+
 ## Standard Library
 
 print(text); - prints text
@@ -44,9 +52,15 @@ exit(code); - exits program with code code
 print("Hello, world!");
 ```
 
+
+[![CC BY 4.0][cc-by-image]][cc-by]
 [![CC BY ND 4.0][cc-by-nd-image]][cc-by-nd]
 
 [cc-by-nd]: https://creativecommons.org/licenses/by-nd/4.0/
 [cc-by-nd-image]: https://i.creativecommons.org/l/by-nd/4.0/88x31.png
 [cc-by-nd-shield]: https://img.shields.io/badge/License-CC%20BY%20ND%204.0-lightgrey.svg
+
+[cc-by]: https://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 
