@@ -1,4 +1,5 @@
 [![CC BY ND 4.0][cc-by-nd-shield]][cc-by-nd]
+[![CC BY 4.0][cc-by-shield]][cc-by]
 
 ![H Logo](https://github.com/Fowsoft/H-Scripting-Language/blob/e30d464ef0a83aa12bb17c1ae59e4edd80ba30c8/HLogo.png)
 # H Scripting Language
