@@ -107,7 +107,6 @@ int64_t OperatorBlockProc(const int64_t aNumber1, const int64_t aNumber2, const 
 	//std::cout << "OB: N1: " << aNumber1 << " N2: " << aNumber2 << " OP: " << aEnum << "\n"; //debug
 	switch(aEnum) {
 		case(OPERATOR_PLUS):
-			std::cout << aNumber1 + aNumber2 << "\n";
 			return aNumber1 + aNumber2;
 		case(OPERATOR_MINUS):
 			return aNumber1 - aNumber2;
