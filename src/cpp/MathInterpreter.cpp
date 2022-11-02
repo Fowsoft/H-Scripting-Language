@@ -107,6 +107,7 @@ int64_t OperatorBlockProc(const int64_t aNumber1, const int64_t aNumber2, const 
 	//std::cout << "OB: N1: " << aNumber1 << " N2: " << aNumber2 << " OP: " << aEnum << "\n"; //debug
 	switch(aEnum) {
 		case(OPERATOR_PLUS):
+			std::cout << aNumber1 + aNumber2 << "\n";
 			return aNumber1 + aNumber2;
 		case(OPERATOR_MINUS):
 			return aNumber1 - aNumber2;
@@ -137,16 +138,13 @@ int64_t ParenthesisBlockProc(const std::string aParenthesisBlock) {
 	
 	uint64_t lId = 0;
 	uint64_t lId2 = 0;
-	uint64_t lLastPos = 0;
 	
 	//first pass -> *, / and mod
 	while(ContainsMultiple(lTempString.c_str(), "*/%", 3) && lId < lTempString.size()) {
 		if(lTempString[lId] == '+') {
-			lLastPos = lId + 1;
 			lNumber1.clear();
 		}
 		elif(lTempString[lId] == '-') {
-			lLastPos = lId + 1;
 			lNumber1.clear();
 		}
 		elif(lTempString[lId] == '*') {
@@ -165,10 +163,11 @@ int64_t ParenthesisBlockProc(const std::string aParenthesisBlock) {
 					lId2++;
 				}
 			}
-			lTempString.erase(lLastPos, lId2 - lLastPos);
+			lTempString.erase(lId - lNumber1.size(), lNumber1.size() + lNumber2.size() + 1);
+			//std::cout << "ERA " << lTempString << "\n"; //debug
 			lInsertTemp = std::to_string(OperatorBlockProc(std::stoi(lNumber1), std::stoi(lNumber2), OPERATOR_MULT));
-			lTempString.insert(lLastPos, lInsertTemp);
-			lLastPos = lLastPos + lInsertTemp.size() - lNumber2.size();
+			lTempString.insert(lId - lNumber1.size(), lInsertTemp);
+			//std::cout << "INS " << lTempString << "\n"; //debug
 			lId = 0; //to prevent overflow
 			lId2 = 0;
 			lNumber1.clear();
@@ -192,10 +191,11 @@ int64_t ParenthesisBlockProc(const std::string aParenthesisBlock) {
 					lId2++;
 				}
 			}
-			lTempString.erase(lLastPos, lId2 - lLastPos);
+			lTempString.erase(lId - lNumber1.size(), lNumber1.size() + lNumber2.size() + 1);
+			//std::cout << "ERA " << lTempString << "\n"; //debug
 			lInsertTemp = std::to_string(OperatorBlockProc(std::stoi(lNumber1), std::stoi(lNumber2), OPERATOR_DIV));
-			lTempString.insert(lLastPos, lInsertTemp);
-			lLastPos = lLastPos + lInsertTemp.size() - lNumber2.size();
+			lTempString.insert(lId - lNumber1.size(), lInsertTemp);
+			//std::cout << "INS " << lTempString << "\n"; //debug
 			lId = 0; //to prevent overflow
 			lId2 = 0;
 			lNumber1.clear();
@@ -219,10 +219,11 @@ int64_t ParenthesisBlockProc(const std::string aParenthesisBlock) {
 					lId2++;
 				}
 			}
-			lTempString.erase(lLastPos, lId2 - lLastPos);
+			lTempString.erase(lId - lNumber1.size(), lNumber1.size() + lNumber2.size() + 1);
+			//std::cout << "ERA " << lTempString << "\n"; //debug
 			lInsertTemp = std::to_string(OperatorBlockProc(std::stoi(lNumber1), std::stoi(lNumber2), OPERATOR_MOD));
-			lTempString.insert(lLastPos, lInsertTemp);
-			lLastPos = lLastPos + lInsertTemp.size() - lNumber2.size();
+			lTempString.insert(lId - lNumber1.size(), lInsertTemp);
+			//std::cout << "INS " << lTempString << "\n"; //debug
 			lId = 0; //to prevent overflow
 			lId2 = 0;
 			lNumber1.clear();
@@ -231,7 +232,7 @@ int64_t ParenthesisBlockProc(const std::string aParenthesisBlock) {
 			lNumber1 += lTempString[lId]; //when loops over adds 1
 		}
 		else { lNumber1 += lTempString[lId]; }
-		//std::cout << lTempString << "\n"; //debug
+		std::cout << lTempString << "\n"; //debug
 		lId++;
 	}
 	
@@ -241,9 +242,8 @@ int64_t ParenthesisBlockProc(const std::string aParenthesisBlock) {
 	
 	lId = 0;
 	lId2 = 0;
-	lLastPos = 0;
 	
-	//std::cout << "SP, current PB: " << lTempString << "\n"; //debug
+	std::cout << "SP, current PB: " << lTempString << "\n"; //debug
 	
 	//second pass -> + -
 	while(ContainsMultiple(lTempString.c_str(), "+-", 2) && lId < lTempString.size()) {
@@ -263,10 +263,11 @@ int64_t ParenthesisBlockProc(const std::string aParenthesisBlock) {
 					lId2++;
 				}
 			}
-			lTempString.erase(lLastPos, lId2 - lLastPos);
+			lTempString.erase(lId - lNumber1.size(), lNumber1.size() + lNumber2.size() + 1);
+			//std::cout << "ERA " << lTempString << "\n"; //debug
 			lInsertTemp = std::to_string(OperatorBlockProc(std::stoi(lNumber1), std::stoi(lNumber2), OPERATOR_PLUS));
-			lTempString.insert(lLastPos, lInsertTemp);
-			lLastPos = lLastPos + lInsertTemp.size() - lNumber2.size();
+			lTempString.insert(lId - lNumber1.size(), lInsertTemp);
+			//std::cout << "INS " << lTempString << "\n"; //debug
 			lId = 0; //to prevent overflow
 			lId2 = 0;
 			lNumber1.clear();
@@ -276,7 +277,15 @@ int64_t ParenthesisBlockProc(const std::string aParenthesisBlock) {
 		}
 		elif(lTempString[lId] == '-') {
 			if(lNumber1.empty()) { //if number empty -> -X, add - and carry on
-				 lNumber1 += lTempString[lId]; lId++; loopover;
+				lNumber1 += lTempString[lId]; lId++; loopover;
+			}
+			elif(lTempString[lId + 1] == '-') {
+				lId2 = lId + 2; //skip - operator
+				while(!IsOneOf(lTempString[lId2], Operators, OperatorsAmount) && lId2 < lTempString.size()) {
+					lNumber2 += lTempString[lId2];
+					lId2++;
+				}
+				lNumber2 = std::to_string(-std::stoi(lNumber2)); //set to positive
 			}
 			else {
 				lId2 = lId + 1;
@@ -285,10 +294,11 @@ int64_t ParenthesisBlockProc(const std::string aParenthesisBlock) {
 					lId2++;
 				}
 			}
-			lTempString.erase(lLastPos, lId2 - lLastPos);
+			lTempString.erase(lId - lNumber1.size(), lNumber1.size() + lNumber2.size() + 1);
+			//std::cout << "ERA " << lTempString << "\n"; //debug
 			lInsertTemp = std::to_string(OperatorBlockProc(std::stoi(lNumber1), std::stoi(lNumber2), OPERATOR_MINUS));
-			lTempString.insert(lLastPos, lInsertTemp);
-			lLastPos = lLastPos + lInsertTemp.size() - lNumber2.size();
+			lTempString.insert(lId - lNumber1.size(), lInsertTemp);
+			//std::cout << "INS " << lTempString << "\n"; //debug
 			lId = 0; //to prevent overflow
 			lId2 = 0;
 			lNumber1.clear();
@@ -299,10 +309,9 @@ int64_t ParenthesisBlockProc(const std::string aParenthesisBlock) {
 		else {
 			lNumber1 += lTempString[lId];
 		}
-		//std::cout << lTempString << "\n"; //debug
+		std::cout << lTempString << "\n"; //debug
 		lId++;
 	}
-	
 	//std::cout << "FNL: " << lTempString << "\n"; //debug
 	return std::stoi(lTempString);
 }
@@ -361,7 +370,6 @@ void Wrapper() {
 }
 
 int main(int argc, char **argv) {
-
 	Wrapper();
 	//Sample expressions tested
 	//32+(7*(5+4)+6)*40
@@ -374,4 +382,6 @@ int main(int argc, char **argv) {
 	//-5 * 10
 	//10 * -5
 	//-5+6
+	//114+115+-78
+	//114 - 78 + 45 * (3 - 1) - 4
 }
