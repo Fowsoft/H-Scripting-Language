@@ -1,7 +1,16 @@
 # The C++ Interpreter for H
 
-This includes 1 file. If you need just the interpreter, copy the H and Utils namespaces.
-If you already implemented the utilities, copy just the H namespace.
+This includes 2 files. 
+
+`Main.cpp` - the interpreter
+
+`MathInterpreter.cpp` - the math solver
+
+If you need just the interpreter, copy the H and Utils namespaces from Main.cpp.
+
+If you already implemented the utilities, copy just the H namespace (from Main.cpp).
+
+If you need just a math expression solver, copy the MathInterpreter.cpp file.
 
 ## String Special Characters
 
@@ -23,6 +32,8 @@ If you already implemented the utilities, copy just the H namespace.
 
 -shell handler
 
+-standalone math interpreter
+
 ## Warnings and Errors
 
 ### Warnings
@@ -30,8 +41,6 @@ If you already implemented the utilities, copy just the H namespace.
 Extra semicolon at line N
 
 ### Errors
-
-
 
 //todo: add warnings and errors
 
