@@ -41,11 +41,19 @@ print(text); - prints text
 
 input(num); - returns correct variable type of num letters
 
-exit(code); - exits program with code code
+exit(code); - exits program with code code (treated as keyword)
+
+### C++ Interpreter only
+
+hinf(code); - print information about H (treated as keyword)
 
 setcolor(num); - sets color of id num (please check your interpreters' and OS's settings)
 
 resetcolor(); - resets color
+
+declline(function); - gets declaration line of function
+
+declline(variable); - gets declaration lione of variable
 
 ## Hello World
 
