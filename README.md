@@ -7,7 +7,7 @@
 H is an free and open-source C-like scripting language aimed at unifying Fowsoft products.
 It is extremely simple and very easy to implement and integrate.
 
-H and its derivatives are licensed under CC-BY-ND 4.0.
+H and its derivatives are licensed under CC-BY 4.0 (C++) or CC-BY-ND 4.0 (Java).
 
 ## Contents
 
@@ -16,8 +16,6 @@ This repo includes:
 -the base C++ interpreter (src/cpp/)
 
 -the base Java interpreter (src/java/)
-
--the base JavaScript interpreter (src/js/)
 
 -the official specifications (spc/)
 
@@ -37,8 +35,6 @@ C++ Interpreter: CC-BY 4.0
 
 Java Interpreter: CC-BY-ND 4.0
 
-JS Interpreter: ???
-
 ## Standard Library
 
 print(text); - prints text
@@ -46,6 +42,10 @@ print(text); - prints text
 input(num); - returns correct variable type of num letters
 
 exit(code); - exits program with code code
+
+setcolor(num); - sets color of id num (please check your interpreters' and OS's settings)
+
+resetcolor(); - resets color
 
 ## Hello World
 
