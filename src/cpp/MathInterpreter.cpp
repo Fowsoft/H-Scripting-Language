@@ -92,8 +92,9 @@ const char Operators[] = {
 	'-',
 	'*',
 	'/',
+	'%'
 };
-constexpr uint64_t OperatorsAmount = 4;
+constexpr uint64_t OperatorsAmount = 5;
 
 enum OperatorsEnum {
 	OPERATOR_PLUS = 0,
