@@ -24,6 +24,16 @@ If you need just a math expression solver, copy the MathInterpreter.cpp file.
 
 `\}` - } (right parenthesis)
 
+## Special Functions (C++ only)
+
+`hinf();` - print information about H (treated as keyword)
+
+`setcolor(num);` - sets color of id num (please check your interpreters' and OS's settings)
+
+`resetcolor();` - resets color
+
+`declline(identifier);` - gets declaration line of function or variable
+
 ## Included
 
 -utilities
