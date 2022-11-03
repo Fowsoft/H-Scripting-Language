@@ -26,9 +26,30 @@ If you need just a math expression solver, copy the MathInterpreter.cpp file.
 
 ## Special Functions (C++ only)
 
-`hinf();` - print information about H (treated as keyword)
+`hinf; - print information about H (treated as keyword)
 
 `setcolor(num);` - sets color of id num (please check your interpreters' and OS's settings)
+
+**Possible values:**
+
+- `black`
+- `red`
+- `green`
+- `brown`
+- `blue`
+- `purple`
+- `cyan`
+- `light_grey`
+- `dark_grey`
+- `light_red`
+- `light_green`
+- `yellow`
+- `light_blue`
+- `pink`
+- `light_cyan`
+- `white`
+
+**WARNING: Do not forget to add quotes!**
 
 `resetcolor();` - resets color
 
