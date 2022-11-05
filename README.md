@@ -13,7 +13,7 @@ H and its derivatives are licensed under CC-BY 4.0 (C++) or CC-BY-ND 4.0 (Java).
 
 This repo includes:
 
--the base C++ interpreter (src/cpp/)
+-the base C++ interpreter (src/cpp/) (WARNING: Is unfinished!)
 
 -the base Java interpreter (src/java/)
 
@@ -31,7 +31,7 @@ Other file formats coming in the future.
 
 ## Licensing
 
-C++ Interpreter: CC-BY 4.0
+C++ Interpreter: CC-BY 4.0 (unfinished)
 
 Java Interpreter: CC-BY-ND 4.0
 
