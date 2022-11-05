@@ -1,3 +1,5 @@
+## NOTE: This interpreter is unfinished. If you want to take the risk and plunge into the 1300 lines of badly-readable code, go ahead.
+
 # The C++ Interpreter for H
 
 This includes 2 files. 
